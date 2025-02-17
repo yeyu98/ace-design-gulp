@@ -1,5 +1,6 @@
 packages: 
   - 'packages/**'
+  - 'scripts'
 
 
 # 用于替换monorepo仓库中的不同版本的react
