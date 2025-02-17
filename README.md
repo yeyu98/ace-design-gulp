@@ -5,7 +5,7 @@
 
 
 - 组件库技术选型？
-    - React、Typescript、Vite、Less；
+    - React、Typescript、Gulp、Less；
 - 如何调试组件库？
     - 创建play目录之后使用pnpm workspace添加组件库；
 - 如何构建组件库？
