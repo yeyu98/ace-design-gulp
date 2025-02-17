@@ -32,6 +32,10 @@ importers:
   packages/utils: {}
 
   play:
+    dependencies:
+      '@ace-design-gulp/components':
+        specifier: workspace:^
+        version: link:../packages/components
     devDependencies:
       '@eslint/js':
         specifier: ^9.19.0
