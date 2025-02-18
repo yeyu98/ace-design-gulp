@@ -1,4 +1,4 @@
 const gulp = require('gulp')
-require('./gulpfile');
-const targetTask = gulp.task('compileLess') || gulp.series([]);
+require('./gulpFile');
+const targetTask = gulp.task('compileTS') || gulp.series([]);
 targetTask()

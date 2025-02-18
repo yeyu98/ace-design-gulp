@@ -8,7 +8,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "babel": "^6.23.0",
     "gulp": "^4.0.2",
-    "gulp-less": "^5.0.0"
+    "gulp-babel": "^8.0.0",
+    "gulp-less": "^5.0.0",
+    "gulp-typescript": "6.0.0-alpha.1",
+    "merge2": "^1.4.1"
+  },
+  "dependencies": {
+    "del": "6"
   }
 }
