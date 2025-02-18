@@ -3,14 +3,14 @@ import './Button.less'
 
 export interface ButtonProps {
     onClick: any;
-    Children: React.ReactNode
+    children: React.ReactNode
 }
 
 function Button(props: ButtonProps) {
-    const {Children} = props
+    const {children} = props
     return (
         <button onClick={props?.onClick}>
-            {Children}
+            {children}
         </button>
     );
 }
