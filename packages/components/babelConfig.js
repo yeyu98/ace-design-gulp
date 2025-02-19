@@ -1,4 +1,5 @@
 module.exports = ({ isESM }) => {
+    console.log("isESM", isESM)
     return {
         presets: [
             '@babel/preset-react',
