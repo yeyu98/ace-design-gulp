@@ -1,5 +1,5 @@
 const path = require('path')
-const getBabelConfig = require('./babelConfig')
+const getBabelConfig = require('./scripts/babelConfig')
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {

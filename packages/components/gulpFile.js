@@ -6,7 +6,7 @@ const del = require('del')
 const compileTS = require('gulp-typescript')
 const compileLess = require('gulp-less')
 const compileJs = require('gulp-babel')
-const getBabelConfig = require('./babelConfig')
+const getBabelConfig = require('./scripts/babelConfig')
 const tsConfig = require('./tsconfig.json')
 
 // 清空lib

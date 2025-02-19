@@ -1,5 +1,5 @@
 const webpack = require('webpack')
-const webpackConfig = require('./webpack.config')
+const webpackConfig = require('../webpack.config')
 const compileDist = () => new Promise((resolve, reject) => {
     webpack(webpackConfig, function(err, stats) {
         if(err) {

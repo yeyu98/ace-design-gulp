@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "./index.ts",
-  "scripts": {},
+  "scripts": {
+    "compile:dist": "node ./scripts/compileDist",
+    "compile:lib": "node ./scripts/compileLib",
+    "compile": "pnpm compile:lib && pnpm compile:dist"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
