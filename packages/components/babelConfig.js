@@ -17,9 +17,6 @@ module.exports = ({ isESM }) => {
                     }
                 },
             ],
-        ],
-        plugins: [
-            'lodash'
         ]
     };
 };
