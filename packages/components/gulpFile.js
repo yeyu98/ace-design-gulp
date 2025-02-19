@@ -9,21 +9,24 @@ const compileLess = require('gulp-less')
 const tsConfig = require('./tsconfig.json')
 const getBabelConfig = require('./babelConfig')
 
+
 // gulp.task('clean',() => {
 //     del(['./es', './lib', './dist'])
 // })
 
 gulp.task('compileTS', function() {
     const tsStream = gulp.src(['**/*.ts', '**/*.tsx', '!**/node_modules/**/*.*']).pipe(compileTS({...tsConfig.compilerOptions}))
-    const jsSteam = tsStream.js.pipe(getBabelConfig({isESM: true}))
     .pipe(gulp.dest('./lib'))
     .pipe(gulp.dest('./es'))
+    // const jsSteam = tsStream.js.pipe(getBabelConfig({isESM: true}))
+    // .pipe(gulp.dest('./lib'))
+    // .pipe(gulp.dest('./es'))
 
-    const dtsStream = tsStream.dts
-    .pipe(gulp.dest('./lib'))
-    .pipe(gulp.dest('./es'))
+    // const dtsStream = tsStream.dts
+    // .pipe(gulp.dest('./lib'))
+    // .pipe(gulp.dest('./es'))
 
-    return merge2([jsSteam, dtsStream])
+    return tsStream
 })
 
 gulp.task('compileLess', () => 
@@ -34,6 +37,4 @@ gulp.task('compileLess', () =>
 )
 
 
-// gulp.task('less', gulp.series(['clean', 'compileLess']))
-
-export {}
+// gulp.task('less', gulp.series('clean', 'compileLess'))

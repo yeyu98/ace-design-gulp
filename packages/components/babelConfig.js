@@ -1,4 +1,4 @@
-module.exports = ({ isESM }: {isESM : boolean}) => {
+module.exports = ({ isESM }) => {
     return {
         presets: [
             '@babel/preset-react',
