@@ -27,7 +27,7 @@ const compileTSToJS = ({isESM, outputDir}) => {
     const dtsStream = tsStream.dts
     .pipe(gulp.dest(outputDir))
 
-    return merge2([jsStream, dtsStream])
+    return merge2([dtsStream, jsStream])
 }
 
 // 编译成ESM
