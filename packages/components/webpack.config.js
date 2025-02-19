@@ -9,7 +9,7 @@ module.exports = {
         library: 'ace-design',
         libraryTarget: 'umd',
         filename: 'ace-design.js',
-        path: path.join(__dirname, 'dist/umd')
+        path: path.join(__dirname, 'dist')
     },
     optimization: {
         minimize: false,
@@ -17,6 +17,23 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.css$/,
+                exclude: /node_modules/,
+                use: [
+                    "style-loader",
+                    "css-loader"
+                ]
+            },
+            {
+                test: /\.less$/,
+                exclude: /node_modules/,
+                use: [
+                    "style-loader",
+                    "css-loader",
+                    "less-loader"
+                ]
+            },
             {
                 test: /\.tsx?$/,
                 exclude: /node_modules/,
@@ -32,15 +49,6 @@ module.exports = {
                             happyPackMode: true
                         }
                     }
-                ]
-            },
-            {
-                test: /\.less$/,
-                exclude: /node_modules/,
-                use: [
-                    "style-loader",
-                    "css-loader",
-                    "less-loader"
                 ]
             }
         ]
